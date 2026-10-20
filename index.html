@@ -20,170 +20,174 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Bart-Ziem", "url": "https://kris20032.github.io/bartziem/", "telephone": "+48794199548", "image": "https://kris20032.github.io/bartziem/img/og.jpg", "areaServed": "Wałbrzych", "sameAs": ["https://www.facebook.com/bartziemwalbrzych/"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=f7144522">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=20261020">
+<link rel="stylesheet" href="assets/kw.css?v=20261020">
 </head>
-<body>
+<body class="kw">
 
-<header class="nav">
-  <div class="wrap nav-inner">
-    <a class="brand brand-has-logo" href="index.html"><img class="brand-logo" src="img/logo.png" alt="Bart-Ziem" width="545" height="266" decoding="async"></a>
-    <nav class="nav-links">
-      <a href="oferta.html">Oferta</a>
-      <a href="realizacje.html">Realizacje</a>
-      <a href="o-nas.html">O nas</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="tel:+48794199548" class="btn btn-accent">Zadzwoń +48 794 199 548</a>
-    </nav>
-    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
+<header class="kw-head">
+  <a class="kw-logo" href="index.html"><img src="img/logo.png" alt="Bart-Ziem" width="545" height="266" decoding="async"></a>
+  <a class="kw-phone" href="tel:+48794199548">+48 794 199 548 <span class="kw-arr">→</span></a>
 </header>
+<button class="kw-pill" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+<div class="kw-menu" role="dialog" aria-label="Menu">
+  <a class="kw-menu-logo" href="index.html"><img src="img/logo-light.png" alt="Bart-Ziem" width="545" height="266"></a>
+  <nav class="kw-menu-main">
+    <a href="index.html">Start</a>
+    <a href="oferta.html">Oferta</a>
+    <a href="realizacje.html">Realizacje</a>
+    <a href="o-nas.html">O nas</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+  <div class="kw-menu-col">
+    <p>Usługi minikoparką</p>
+    <a href="oferta.html">Wykopy pod fundamenty</a>
+    <a href="oferta.html">Przyłącza i rowy</a>
+    <a href="oferta.html">Drenaże i odwodnienia</a>
+    <a href="oferta.html">Niwelacja terenu</a>
+    <a href="oferta.html">Korytowanie pod kostkę</a>
+    <a href="oferta.html">Prace w ciasnych miejscach</a>
+  </div>
+  <div class="kw-menu-col">
+    <p>Kontakt</p>
+    <a href="tel:+48794199548">+48 794 199 548</a>
+    <a href="mailto:bartziem88@gmail.com">bartziem88@gmail.com</a>
+    <a href="https://www.facebook.com/bartziemwalbrzych/" target="_blank" rel="noopener">Facebook</a>
+    <p class="kw-gap">Obszar</p>
+    <a href="kontakt.html">Wałbrzych i okolice</a>
+  </div>
+</div>
 
 <main>
-<section class="hero-fach">
-  <img class="hf-photo" src="img/hero.jpg" fetchpriority="high" data-rotate="img/g12.jpg|img/g8.jpg" alt="Bart-Ziem" width="1880" height="1253">
-  <div class="hf-panel">
-    <div class="hf-inner">
-      <span class="hf-kicker">Usługi minikoparką · Wałbrzych i okolice</span>
-      <h1 class="hf-title">Prace ziemne minikoparką <em>tam, gdzie duża maszyna nie wjedzie.</em></h1>
-      <p class="hf-lead">Wykopy pod fundamenty i przyłącza, drenaże, korytowanie pod kostkę i wyrównanie terenu w Wałbrzychu i okolicy.</p>
-      <a class="hf-phone" href="tel:+48794199548"><span class="hf-phone-lab">Zadzwoń teraz</span><span class="hf-phone-num"><svg class="ico-tel" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" fill="currentColor"/></svg> +48 794 199 548</span></a>
-      <div class="hf-actions">
-        <a href="kontakt.html" class="btn btn-accent">Zapytaj o wycenę <span class="arr">→</span></a>
-        <a href="tel:+48794199548" class="btn btn-ghost hf-ghost">Zadzwoń +48 794 199 548</a>
+<section class="kw-hero">
+  <div class="kw-hero-txt">
+    <span class="kw-kicker">Usługi minikoparką · Wałbrzych</span>
+    <h1>Prace ziemne minikoparką</h1>
+    <p>Wykopy pod fundamenty i&nbsp;przyłącza, drenaże, korytowanie pod kostkę i&nbsp;wyrównanie terenu. Mała maszyna wjedzie tam, gdzie duża się nie zmieści.</p>
+    <a class="kw-btn" href="kontakt.html">Zapytaj o&nbsp;wycenę</a>
+  </div>
+  <div class="kw-hero-art" aria-hidden="true">
+    <img src="img/hero.jpg" fetchpriority="high" alt="" width="1880" height="1253">
+    <i></i><i></i><i></i>
+  </div>
+</section>
+
+<section class="kw-dark kw-sec">
+  <div class="kw-intro reveal">
+    <span class="kw-vert">Co robimy</span>
+    <p>Bart-Ziem to usługi minikoparką w&nbsp;Wałbrzychu i&nbsp;okolicy, dla osób prywatnych, firm i&nbsp;instytucji. Kopiemy pod fundamenty i&nbsp;przyłącza, robimy drenaże, korytujemy pod kostkę i&nbsp;równamy teren. Mała maszyna wjedzie do ogrodu za domem, na podwórko i&nbsp;na ciasną działkę, gdzie koparko-ładowarka by się nie zmieściła.</p>
+  </div>
+  <div class="kw-pair">
+    <figure class="reveal">
+      <a href="oferta.html"><span class="kw-ph"><img src="img/g1.jpg" alt="Wykop pod fundamenty" width="1880" height="1253" decoding="async"></span></a>
+      <figcaption><a class="kw-link" href="oferta.html">Wykopy pod fundamenty <span class="kw-arr">→</span></a><span class="kw-sub">Pod dom, garaż, altanę i&nbsp;ogrodzenie.</span></figcaption>
+    </figure>
+    <figure class="reveal">
+      <a href="oferta.html"><span class="kw-ph"><img src="img/g2.jpg" alt="Przyłącza w wykopie" width="1776" height="1120" decoding="async"></span></a>
+      <figcaption><a class="kw-link" href="oferta.html">Przyłącza i&nbsp;rowy <span class="kw-arr">→</span></a><span class="kw-sub">Woda, kanalizacja, prąd i&nbsp;gaz.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="kw-dark kw-huge-wrap">
+  <h2 class="kw-huge reveal">Prace</h2>
+</section>
+<section class="kw-dark kw-works">
+  <a class="kw-work reveal" href="realizacje.html"><img src="img/g9.jpg" alt="Wykop pod fundamenty na budowie" loading="lazy" width="1880" height="1251" decoding="async"><h3>Fundamenty</h3></a>
+  <a class="kw-work reveal" href="realizacje.html"><img src="img/g4.jpg" alt="Rów odwadniający przy polu" loading="lazy" width="1880" height="1253" decoding="async"><h3>Rowy i&nbsp;drenaże</h3></a>
+  <a class="kw-work reveal" href="realizacje.html"><img src="img/g8.jpg" alt="Koparka przy niwelacji terenu" loading="lazy" width="1808" height="1168" decoding="async"><h3>Niwelacja</h3></a>
+</section>
+<section class="kw-dark kw-works-cta">
+  <a class="kw-btn" href="realizacje.html">Nasze prace</a>
+  <p>Zdjęcia poglądowe pokazują rodzaj prac, które wykonujemy.</p>
+</section>
+
+<section class="kw-srv-sec">
+  <div class="kw-srv-head reveal">
+    <span class="kw-kicker">Usługi</span>
+    <h2>Prowadzimy robotę od pierwszego telefonu do równego terenu.</h2>
+  </div>
+  <div class="kw-srv-wrap" data-kw-carousel>
+    <div class="kw-arrows"><button type="button" data-dir="1" aria-label="Dalej">→</button><button type="button" data-dir="-1" aria-label="Wstecz">←</button></div>
+    <div class="kw-srv-track">
+      <div class="kw-srv-item"><a href="oferta.html"><span class="kw-ph"><img src="img/g7.jpg" alt="Wykopy pod fundamenty" loading="lazy" width="1880" height="1253" decoding="async"></span><h3>Wykopy pod fundamenty<span class="kw-arr">→</span></h3></a><p>Ławy pod dom, garaż, altanę albo ogrodzenie. Ziemię odkładamy tam, gdzie wskażesz, żeby wróciła potem do zasypki.</p></div>
+      <div class="kw-srv-item"><a href="oferta.html"><span class="kw-ph"><img src="img/g3.jpg" alt="Przyłącza i rowy" loading="lazy" width="1808" height="1168" decoding="async"></span><h3>Przyłącza i&nbsp;rowy<span class="kw-arr">→</span></h3></a><p>Wąskie wykopy pod wodociąg, kanalizację, prąd i&nbsp;gaz, od budynku do granicy działki.</p></div>
+      <div class="kw-srv-item"><a href="oferta.html"><span class="kw-ph"><img src="img/g6.jpg" alt="Drenaże i odwodnienia" loading="lazy" width="1880" height="1253" decoding="async"></span><h3>Drenaże i&nbsp;odwodnienia<span class="kw-arr">→</span></h3></a><p>Rowy pod drenaż wokół domu, studnie chłonne i&nbsp;odprowadzenie deszczówki, żeby woda nie stała pod ścianą.</p></div>
+      <div class="kw-srv-item"><a href="oferta.html"><span class="kw-ph"><img src="img/g10.jpg" alt="Niwelacja i prace w ogrodzie" loading="lazy" width="1880" height="1253" decoding="async"></span><h3>Niwelacja i&nbsp;ogród<span class="kw-arr">→</span></h3></a><p>Wyrównanie działki pod trawnik, rozplantowanie ziemi po budowie, skarpy, doły pod drzewa i&nbsp;oczko wodne.</p></div>
+      <div class="kw-srv-item"><a href="oferta.html"><span class="kw-ph"><img src="img/k5.jpg" alt="Podjazd z kostki na równym korycie" loading="lazy" width="1600" height="1068" decoding="async"></span><h3>Korytowanie pod kostkę<span class="kw-arr">→</span></h3></a><p>Zdejmujemy ziemię na głębokość pod podbudowę podjazdu, ścieżki albo tarasu, żeby brukarz dostał równe koryto.</p></div>
+      <div class="kw-srv-item"><a href="oferta.html"><span class="kw-ph"><img src="img/g5.jpg" alt="Minikoparka przy budynku" loading="lazy" width="1880" height="1253" decoding="async"></span><h3>Ciasne miejsca<span class="kw-arr">→</span></h3></a><p>Podwórka, przejścia między budynkami, działki za domem i&nbsp;teren przy istniejącym ogrodzeniu.</p></div>
+    </div>
+  </div>
+  <div class="kw-progress" aria-hidden="true"><i></i></div>
+</section>
+
+<section class="stopklatka kw-stk" aria-hidden="true">
+  <div class="stk-bg" style="background-image:url(img/k6.jpg)"></div>
+</section>
+
+<section class="kw-dark kw-sec kw-pt-s">
+  <div class="kw-steps" data-kw-slider>
+    <div class="kw-arrows"><button type="button" data-dir="1" aria-label="Następny krok">→</button><button type="button" data-dir="-1" aria-label="Poprzedni krok">←</button></div>
+    <div class="kw-steps-view">
+      <div class="kw-steps-track">
+        <div class="kw-step"><div><blockquote>Dzwonisz i&nbsp;mówisz, co trzeba zrobić i&nbsp;gdzie. Wystarczy z&nbsp;grubsza: wykop, przyłącze, drenaż.</blockquote><p class="kw-step-lab"><b>01</b>Telefon</p></div><span class="kw-ph"><img src="img/k1.jpg" alt="Działka przed rozpoczęciem prac" loading="lazy" width="1600" height="1066" decoding="async"></span></div>
+        <div class="kw-step"><div><blockquote>Przyjeżdżamy, sprawdzamy dojazd i&nbsp;grunt. Podajemy cenę i&nbsp;ustalamy dzień wjazdu.</blockquote><p class="kw-step-lab"><b>02</b>Oględziny i&nbsp;wycena</p></div><span class="kw-ph"><img src="img/k2.jpg" alt="Budowa domu z ziemią z wykopu" loading="lazy" width="1600" height="1066" decoding="async"></span></div>
+        <div class="kw-step"><div><blockquote>Kopiemy, zasypujemy i&nbsp;równamy, pilnując ogrodzenia, trawnika i&nbsp;tego, co już stoi na działce.</blockquote><p class="kw-step-lab"><b>03</b>Praca minikoparką</p></div><span class="kw-ph"><img src="img/k3.jpg" alt="Teren w trakcie prac ziemnych" loading="lazy" width="1200" height="800" decoding="async"></span></div>
+        <div class="kw-step"><div><blockquote>Zostawiamy wyrównaną działkę, gotową dla murarzy, brukarza albo pod ogród.</blockquote><p class="kw-step-lab"><b>04</b>Teren gotowy</p></div><span class="kw-ph"><img src="img/k4.jpg" alt="Wyrównany teren przy domu" loading="lazy" width="1600" height="1068" decoding="async"></span></div>
       </div>
     </div>
   </div>
 </section>
-<section class="fach-promise">
-  <div class="wrap">
-    <ul class="fp-row reveal"><li>Wycena po oględzinach</li><li>Wałbrzych i okolice</li><li>Dla firm i osób prywatnych</li></ul>
-  </div>
+
+<section class="kw-dark kw-sec kw-pt-0">
+  <h2 class="kw-huge reveal">Atuty</h2>
+  <ul class="kw-perks reveal">
+    <li><strong>Wycena po oględzinach</strong><span>Cena przed wjazdem</span></li>
+    <li><strong>Wałbrzych i&nbsp;okolice</strong><span>Dojeżdżamy na miejsce</span></li>
+    <li><strong>Firmy i&nbsp;prywatni</strong><span>Też krótkie zlecenia</span></li>
+    <li><strong>Ciasne miejsca</strong><span>Minikoparka wejdzie</span></li>
+    <li><strong>Teren gotowy</strong><span>Równo po robocie</span></li>
+  </ul>
 </section>
-<section class="gateways-band">
-  <div class="wrap">
-    <div class="gateways">
-      <a href="oferta.html" class="gateway reveal"><img src="img/g1.jpg" alt="Wykopy pod fundamenty" loading="lazy" width="1880" height="1253" decoding="async"><span class="g-ttl">Wykopy pod fundamenty</span></a>
-      <a href="oferta.html" class="gateway reveal"><img src="img/g2.jpg" alt="Przyłącza i rowy" loading="lazy" width="1776" height="1120" decoding="async"><span class="g-ttl">Przyłącza i rowy</span></a>
-      <a href="oferta.html" class="gateway reveal"><img src="img/g3.jpg" alt="Drenaże i odwodnienia" loading="lazy" width="1808" height="1168" decoding="async"><span class="g-ttl">Drenaże i odwodnienia</span></a>
-    </div>
-  </div>
-</section>
-<section class="proces proces-os fachowcy">
-  <div class="wrap proc-grid">
-    <div class="proc-side">
-      <div class="head reveal">
-        <span class="eyebrow">Jak pracujemy</span>
-        <h2>Wiesz, na czym stoisz - na każdym etapie</h2>
-        <p>Od pierwszego telefonu do odbioru roboty - krok po kroku.</p>
-      </div>
-      <div class="proc-count" aria-hidden="true"><span class="pc-cur">01</span><span class="pc-all">/ 04</span></div>
-      <div class="proc-bar" aria-hidden="true"><i></i></div>
-      <p class="proc-now" aria-hidden="true">Telefon</p>
-    </div>
-    <ol class="proces-line">
-      <li class="reveal"><span class="pno">01</span><h3>Telefon</h3><p>Dzwonisz i mówisz, co trzeba zrobić i gdzie. Wystarczy z grubsza: wykop, przyłącze, drenaż.</p></li>
-      <li class="reveal"><span class="pno">02</span><h3>Oględziny i wycena</h3><p>Sprawdzamy dojazd i grunt, podajemy cenę i ustalamy dzień wjazdu.</p></li>
-      <li class="reveal"><span class="pno">03</span><h3>Praca minikoparką</h3><p>Kopiemy, zasypujemy i równamy, pilnując ogrodzenia, trawnika i tego, co już stoi na działce.</p></li>
-      <li class="reveal"><span class="pno">04</span><h3>Teren gotowy</h3><p>Zostawiamy wyrównaną działkę, gotową dla murarzy, brukarza albo pod ogród.</p></li>
-    </ol>
-  </div>
-</section>
-<section>
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Realizacje</span>
-      <h2>Jakie prace wykonujemy</h2>
-      <p>Wykopy, przyłącza, drenaże i wyrównanie terenu. Zdjęcia poglądowe pokazują rodzaj prac, które wykonujemy.</p>
-    </div>
-    <div class="gallery">
-      <div class="tile t-two3 reveal"><img src="img/g4.jpg" alt="Bart-Ziem" loading="lazy" width="1880" height="1253" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g5.jpg" alt="Bart-Ziem" loading="lazy" width="1880" height="1253" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g6.jpg" alt="Bart-Ziem" loading="lazy" width="1880" height="1253" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g7.jpg" alt="Bart-Ziem" loading="lazy" width="1880" height="1253" decoding="async"></div>
-      <div class="tile t-third reveal"><img src="img/g9.jpg" alt="Bart-Ziem" loading="lazy" width="1880" height="1251" decoding="async"></div>
-    </div>
-    <div style="margin-top:var(--space-7)" class="reveal"><a href="realizacje.html" class="btn btn-accent">Pełna galeria <span class="arr">→</span></a></div>
-  </div>
-</section>
-<section class="fach-uslugi">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Zakres prac</span>
-      <h2>Co robimy minikoparką</h2>
-      <p>Najczęstsze zlecenia. Przy każdym piszę, co wchodzi w zakres.</p>
-    </div>
-    <ul class="fu-list">
-      <li class="fu-row reveal"><div class="fu-name">Wykopy pod fundamenty</div><div class="fu-desc">Ławy fundamentowe pod dom, garaż, altanę albo ogrodzenie. Ziemię odkładamy w miejscu, które wskażesz, żeby wróciła potem do zasypki.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
-      <li class="fu-row reveal"><div class="fu-name">Przyłącza i rowy</div><div class="fu-desc">Wąskie wykopy pod wodociąg, kanalizację, prąd i gaz, od budynku do granicy działki.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
-      <li class="fu-row reveal"><div class="fu-name">Drenaże i odwodnienia</div><div class="fu-desc">Rowy pod drenaż wokół domu, studnie chłonne i odprowadzenie deszczówki, żeby woda nie stała pod ścianą ani na trawniku.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
-      <li class="fu-row reveal"><div class="fu-name">Niwelacja i prace w ogrodzie</div><div class="fu-desc">Wyrównanie działki pod trawnik, rozplantowanie ziemi po budowie, profilowanie skarpy i spadku od domu, doły pod drzewa i oczko wodne.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
-      <li class="fu-row reveal"><div class="fu-name">Korytowanie pod kostkę</div><div class="fu-desc">Zdejmujemy ziemię na głębokość pod podbudowę podjazdu, ścieżki albo tarasu, żeby brukarz dostał równe koryto.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
-      <li class="fu-row reveal"><div class="fu-name">Prace w ciasnych miejscach</div><div class="fu-desc">Podwórka, przejścia między budynkami, działki za domem i teren przy istniejącym ogrodzeniu.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
-    </ul>
-    <div style="margin-top:var(--space-7)" class="reveal"><a href="oferta.html" class="btn btn-ghost">Pełna oferta <span class="arr">→</span></a></div>
-  </div>
-</section>
-<section class="stopklatka" aria-hidden="true">
-  <div class="stk-bg" style="background-image:url(img/g10.jpg)"></div>
-</section>
-<section class="opinie op-fallback">
-  <div class="wrap">
-    <div class="head center reveal">
-      <span class="eyebrow">Opinie</span>
-      <h2>Co mówią klienci</h2>
-      <p>Najszybciej przez telefon.</p>
-    </div>
-  </div>
-</section>
-<section class="cta">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Współpraca</span>
-      <h2>Potrzebujesz fachowca? Wycenimy za darmo.</h2>
-      <p>Napisz, co jest do zrobienia - obejrzymy na miejscu i wycenimy. Bez zobowiązań.</p>
-    </div>
-    <div class="cta-actions reveal">
-      <a href="kontakt.html" class="btn btn-light">Zapytaj o wycenę <span class="arr">→</span></a>
-      <a href="tel:+48794199548" class="btn btn-ghost btn-ghost-cta">+48 794 199 548</a>
-    </div>
-  </div>
+
+<section class="kw-dark kw-sec kw-cta kw-pt-xs">
+  <span class="kw-kicker reveal">Popracujmy razem</span>
+  <h2 class="reveal"><a href="tel:+48794199548">794 199 548</a></h2>
+  <a class="kw-btn reveal" href="kontakt.html">Zapytaj o&nbsp;wycenę</a>
 </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <div class="name">Bart-Ziem</div>
-        <p>Wykopy pod fundamenty i przyłącza, drenaże, korytowanie pod kostkę i wyrównanie terenu w Wałbrzychu i okolicy.</p>
-      </div>
-      <div class="foot-col">
-        <h4>Nawigacja</h4>
-        <a href="oferta.html">Oferta</a>
-        <a href="realizacje.html">Realizacje</a>
-        <a href="o-nas.html">O nas</a>
-        <a href="kontakt.html">Kontakt</a>
-      </div>
-      <div class="foot-col">
-        <h4>Kontakt</h4>
-        <a href="tel:+48794199548">+48 794 199 548</a>
-        <a href="mailto:bartziem88@gmail.com">bartziem88@gmail.com</a>
-        <p>Wałbrzych, dolnośląskie</p>
-      <div class="foot-soc">
-        <a class="soc" href="https://www.facebook.com/bartziemwalbrzych/" target="_blank" rel="noopener" aria-label="Facebook - Bart-Ziem"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" fill="currentColor"/></svg></a>
-      </div>
-      </div>
-    </div>
-    <div class="foot-bot">
-      <span>© 2026 Bart-Ziem</span>
-      <span>Projekt strony: <a class="foot-credit" href="https://impulseo.pl" target="_blank" rel="noopener">Impulseo</a></span>
-    </div>
+<footer class="kw-foot">
+  <div class="kw-foot-grid">
+    <nav class="kw-foot-nav">
+      <p>Kontakt</p>
+      <a href="tel:+48794199548">+48 794 199 548</a>
+      <a href="mailto:bartziem88@gmail.com">bartziem88@gmail.com</a>
+      <span>Wałbrzych, dolnośląskie</span>
+    </nav>
+    <nav class="kw-foot-nav">
+      <p>Strona</p>
+      <a href="oferta.html">Oferta</a>
+      <a href="realizacje.html">Realizacje</a>
+      <a href="o-nas.html">O nas</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <nav class="kw-foot-nav">
+      <p>Obserwuj nas</p>
+      <a href="https://www.facebook.com/bartziemwalbrzych/" target="_blank" rel="noopener" aria-label="Facebook - Bart-Ziem">Facebook</a>
+    </nav>
+    <a class="kw-foot-logo" href="index.html"><img src="img/logo-light.png" alt="Bart-Ziem" width="545" height="266" loading="lazy"></a>
+  </div>
+  <div class="kw-foot-bot">
+    <span>© 2026 Bart-Ziem</span>
+    <span>Projekt strony: <a class="foot-credit" href="https://impulseo.pl" target="_blank" rel="noopener">Impulseo</a></span>
   </div>
 </footer>
 <div class="sticky-call"><a class="sc-call" href="tel:+48794199548"><svg class="ico-tel" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" fill="currentColor"/></svg> Zadzwoń</a><a class="sc-quote" href="kontakt.html">Zapytaj o wycenę</a></div>
 <div class="demo-wazne" data-do="2026-10-26" data-cykl="3" hidden><svg class="dw-ico" width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.6" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.2V12l3.3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="dw-txt"></span></div>
 
-<script src="assets/main.js"></script>
+<script src="assets/main.js?v=20261020"></script>
+<script src="assets/kw.js?v=20261020"></script>
 </body>
 </html>

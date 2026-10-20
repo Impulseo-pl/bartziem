@@ -1,0 +1,261 @@
+/* ============================================================
+   BART-ZIEM - układ wg wzoru (beż + grafit + złoty akcent,
+   szeryfowe nagłówki, hero z ukośnymi kadrami, wielkie słowa).
+   Ładowany PO styles.css - nadpisuje wygląd silnika.
+   ============================================================ */
+:root{
+  --kw-beige:#EDE8E2;
+  --kw-beige-2:#E4DDD4;
+  --kw-dark:#24252B;
+  --kw-dark-2:#2C2D34;
+  --kw-ink:#1F2026;
+  --kw-cream:#EDE8E2;
+  --kw-gold:#B08A4A;
+  --kw-gold-t:#7E6130;           /* złoto do tekstu na beżu (kontrast) */
+  --kw-gold-l:#C9A86A;           /* złoto do tekstu na grafiicie */
+  --kw-muted:#5E5A55;
+  --kw-muted-d:#A9A49C;
+  --kw-serif:'Gloock',Georgia,'Times New Roman',serif;
+  --kw-sans:'Outfit',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --kw-pad:clamp(20px,8.3vw,120px);
+  --kw-ease:cubic-bezier(.16,.84,.44,1);
+  /* silnik czyta te zmienne w swoich klockach (podstrony) */
+  --accent:#9A7536;--accent-d:#7E6130;--accent-soft:rgba(176,138,74,.12);
+  --paper:#EDE8E2;--paper-2:#E4DDD4;--paper-3:#DCD4C9;
+  --ink:#1F2026;--ink-soft:#33343B;--muted:#5E5A55;--line:rgba(31,32,38,.14);
+  --dark:#24252B;
+  --font-display:'Gloock',Georgia,serif;
+  --font-body:'Outfit',system-ui,sans-serif;
+}
+body.kw{background:var(--kw-beige);color:var(--kw-ink);font-family:var(--kw-sans);font-weight:300}
+body.kw h1,body.kw h2,body.kw h3{font-family:var(--kw-serif);font-weight:400;letter-spacing:0}
+body.kw b,body.kw strong{font-weight:500}
+
+/* ---------- NAGŁÓWEK: logo / pigułka menu / telefon ---------- */
+.kw-head{position:absolute;inset:0 0 auto 0;z-index:40;display:flex;align-items:center;justify-content:space-between;
+  padding:28px clamp(20px,2.8vw,40px);pointer-events:none;background:none}
+.kw-head>*{pointer-events:auto}
+.kw-logo img{height:clamp(44px,4.6vw,62px);width:auto}
+.kw-phone{display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:1.2rem;color:var(--kw-ink);letter-spacing:.01em}
+.kw-phone .kw-arr{color:var(--kw-gold);transition:transform .5s var(--kw-ease)}
+.kw-phone:hover .kw-arr{transform:translateX(5px)}
+.kw-pill{position:fixed;top:40px;left:50%;transform:translateX(-50%);z-index:60;width:140px;height:56px;border-radius:999px;
+  background:#fff;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;
+  box-shadow:0 6px 24px rgba(20,20,26,.10);transition:background .4s var(--kw-ease),width .5s var(--kw-ease)}
+.kw-pill span{display:block;width:30px;height:1.5px;background:var(--kw-ink);transition:transform .5s var(--kw-ease)}
+.kw-pill:hover{width:156px}
+body.kw-open .kw-pill span:first-child{transform:translateY(4.25px) rotate(45deg)}
+body.kw-open .kw-pill span:last-child{transform:translateY(-4.25px) rotate(-45deg)}
+
+/* pełnoekranowe menu */
+.kw-menu{position:fixed;inset:0;z-index:55;background:var(--kw-dark);color:var(--kw-cream);display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;gap:clamp(24px,4vw,64px);padding:150px var(--kw-pad) 60px;overflow:auto;
+  opacity:0;visibility:hidden;transition:opacity .5s var(--kw-ease),visibility .5s}
+body.kw-open .kw-menu{opacity:1;visibility:visible}
+body.kw-open{overflow:hidden}
+.kw-menu-main a{display:block;width:max-content;font-family:var(--kw-serif);font-size:clamp(2.6rem,5.4vw,4.8rem);line-height:1.12;color:var(--kw-cream);position:relative}
+.kw-menu-col p{color:var(--kw-gold-l);text-transform:uppercase;letter-spacing:.08em;font-size:.95rem;margin:0 0 16px}
+.kw-menu-col a{display:block;width:max-content;font-size:1.15rem;line-height:2;color:var(--kw-cream);position:relative}
+.kw-menu a::after,.kw-foot-nav a::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:1px;background:var(--kw-gold);
+  transform:scaleX(0);transform-origin:left;transition:transform .55s var(--kw-ease)}
+.kw-menu a:hover::after,.kw-foot-nav a:hover::after{transform:scaleX(1)}
+.kw-menu-logo{position:absolute;top:32px;left:clamp(20px,2.8vw,40px)}
+.kw-menu-logo img{height:56px;width:auto}
+
+/* ---------- przyciski ---------- */
+.kw-btn{display:inline-flex;align-items:center;gap:10px;padding:17px 40px;border-radius:999px;border:1px solid var(--kw-gold);
+  color:inherit;font-size:1.15rem;font-weight:400;transition:background .6s var(--kw-ease),color .6s var(--kw-ease)}
+.kw-btn:hover{background:var(--kw-gold);color:#fff}
+.kw-dark .kw-btn{color:var(--kw-cream)}
+.kw-link{display:inline-flex;align-items:center;gap:8px;font-size:1.2rem;font-weight:400}
+.kw-link .kw-arr{color:var(--kw-gold);transition:transform .5s var(--kw-ease)}
+.kw-link:hover .kw-arr{transform:translateX(5px)}
+.kw-kicker{display:block;text-transform:uppercase;letter-spacing:.06em;font-size:1.15rem;color:var(--kw-gold-t);font-weight:300}
+.kw-dark .kw-kicker{color:var(--kw-gold-l)}
+
+/* ---------- HERO z ukośnymi kadrami ---------- */
+.kw-hero{position:relative;min-height:max(640px,100svh);background:var(--kw-beige);overflow:hidden;padding:0!important;display:flex;align-items:center}
+.kw-hero-txt{position:relative;z-index:2;width:min(52%,700px);padding:150px 0 110px var(--kw-pad)}
+.kw-hero h1{font-size:clamp(3rem,5.3vw,5rem);line-height:.98;text-transform:uppercase;margin:22px 0 24px;color:var(--kw-ink)}
+.kw-hero p{font-size:1.25rem;line-height:1.6;max-width:570px;margin:0 0 34px;color:#2c2c31}
+.kw-hero-art{position:absolute;top:0;right:0;bottom:0;width:50%;
+  clip-path:polygon(34% 0,100% 0,100% 100%,34% 100%,0 50%);}
+.kw-hero-art img{width:100%;height:100%;object-fit:cover;object-position:45% 60%}
+/* beżowe ukośne pasy przecinające zdjęcie (motyw „X” ze wzoru) */
+.kw-hero-art i{position:absolute;background:var(--kw-beige);width:9%;height:160%;top:-30%;transform-origin:center}
+.kw-hero-art i:nth-of-type(1){left:28%;transform:rotate(38deg)}
+.kw-hero-art i:nth-of-type(2){left:58%;transform:rotate(-38deg)}
+.kw-hero-art i:nth-of-type(3){left:80%;transform:rotate(38deg);width:6%}
+
+/* ---------- sekcje ciemne / jasne ---------- */
+.kw-dark{background:var(--kw-dark);color:var(--kw-cream)}
+.kw-dark h2,.kw-dark h3{color:var(--kw-cream)}
+.kw-sec{padding:clamp(80px,10vw,150px) var(--kw-pad)!important}
+.kw-sec p{max-width:none}
+
+/* CO ROBIMY - pionowa etykieta + duży akapit */
+.kw-intro{display:grid;grid-template-columns:minmax(80px,410px) 1fr;align-items:start}
+.kw-vert{justify-self:center;writing-mode:vertical-rl;transform:rotate(180deg);text-transform:uppercase;letter-spacing:.08em;color:var(--kw-gold-l);font-size:1.15rem}
+.kw-intro p{font-size:clamp(1.35rem,2vw,1.85rem);line-height:1.45;margin:0;font-weight:300}
+
+/* siatka: duże zdjęcie + małe przesunięte */
+.kw-pair{display:grid;grid-template-columns:688fr 132fr 380fr;margin-top:clamp(60px,7vw,110px);align-items:start}
+.kw-pair figure{margin:0}
+.kw-pair figure:first-child{grid-column:1}
+.kw-pair figure:last-child{grid-column:3}
+.kw-ph{overflow:hidden;display:block}
+.kw-ph img{width:100%;height:100%;object-fit:cover;transition:transform var(--img-dur,1.4s) var(--kw-ease),filter var(--img-dur,1.4s) var(--kw-ease)}
+@media (hover:hover){a:hover>.kw-ph img,.kw-ph:hover img{transform:scale(1.05);filter:brightness(1.06)}}
+.kw-pair figure:first-child .kw-ph{aspect-ratio:688/490}
+.kw-pair figure:last-child .kw-ph{aspect-ratio:380/258}
+.kw-pair figcaption{margin-top:34px;line-height:1.5}
+.kw-pair figcaption .kw-link{color:var(--kw-cream)}
+.kw-pair figcaption span.kw-sub{display:block;color:var(--kw-muted-d);font-size:1.15rem}
+
+/* WIELKIE SŁOWO */
+.kw-huge{font-family:var(--kw-serif);font-weight:400;text-transform:uppercase;text-align:center;line-height:.8;
+  font-size:clamp(5rem,21vw,19rem);color:var(--kw-cream);margin:0;letter-spacing:-.01em}
+.kw-huge-wrap{padding:clamp(60px,7vw,110px) 0 clamp(50px,6vw,100px)!important;overflow:hidden}
+
+/* PRACE - pełnoszerokie karty */
+.kw-works{padding:0 clamp(20px,2.8vw,40px)!important}
+.kw-work{position:relative;display:block;height:clamp(420px,46vw,664px);overflow:hidden;margin-bottom:0}
+.kw-work img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform var(--img-dur,1.4s) var(--kw-ease),filter var(--img-dur,1.4s) var(--kw-ease)}
+.kw-work::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,20,26,.45),rgba(20,20,26,.05) 45%,rgba(20,20,26,.25))}
+.kw-work h3{position:absolute;z-index:2;left:clamp(24px,5.6vw,80px);top:clamp(30px,6vw,90px);margin:0;color:var(--kw-cream)!important;
+  font-size:clamp(2.6rem,5vw,4.6rem);line-height:1;text-transform:uppercase}
+.kw-work small{position:absolute;z-index:2;left:clamp(24px,5.6vw,80px);top:calc(clamp(30px,6vw,90px) + clamp(2.6rem,5vw,4.6rem) + 14px);color:var(--kw-cream);font-size:1.1rem}
+@media (hover:hover){.kw-work:hover img{transform:scale(1.05);filter:brightness(1.06)}}
+.kw-works-cta{text-align:center;padding:80px 20px 100px!important}
+.kw-works-cta p{color:var(--kw-muted-d);font-size:1rem;margin:22px auto 0;max-width:none}
+
+/* USŁUGI - karuzela na beżu */
+.kw-srv-sec{background:var(--kw-beige);padding:clamp(80px,9vw,130px) 0 clamp(70px,8vw,110px)!important;overflow:hidden}
+.kw-srv-head{text-align:center;padding:0 var(--kw-pad);margin-bottom:54px}
+.kw-srv-head h2{font-size:clamp(2.1rem,3.6vw,3.25rem);line-height:1.18;max-width:660px;margin:16px auto 0;color:var(--kw-ink)}
+.kw-srv-wrap{position:relative;padding-left:var(--kw-pad)}
+.kw-srv-track{display:flex;gap:clamp(24px,9vw,132px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-right:var(--kw-pad);scroll-padding-left:0}
+.kw-srv-track::-webkit-scrollbar{display:none}
+.kw-srv-item{flex:0 0 clamp(270px,33.5vw,483px);scroll-snap-align:start}
+.kw-srv-item .kw-ph{aspect-ratio:483/280}
+.kw-srv-item h3{font-family:var(--kw-sans)!important;font-weight:400!important;font-size:1.25rem!important;margin:40px 0 4px;color:var(--kw-ink)}
+.kw-srv-item h3 .kw-arr{color:var(--kw-gold);margin-left:6px;display:inline-block;transition:transform .5s var(--kw-ease)}
+.kw-srv-item a:hover h3 .kw-arr{transform:translateX(5px)}
+.kw-srv-item p{color:var(--kw-muted);font-size:1.2rem;line-height:1.55;margin:0}
+.kw-arrows{position:absolute;right:var(--kw-pad);top:0;display:flex;flex-direction:column;gap:12px;z-index:3}
+.kw-arrows button{width:72px;height:72px;border-radius:50%;border:1px solid var(--kw-gold);background:transparent;color:var(--kw-ink);cursor:pointer;
+  font-size:1.25rem;display:grid;place-items:center;transition:background .5s var(--kw-ease),color .5s var(--kw-ease)}
+.kw-arrows button:hover{background:var(--kw-gold);color:#fff}
+.kw-dark .kw-arrows button{color:var(--kw-cream)}
+.kw-progress{margin:60px var(--kw-pad) 0;height:1px;background:rgba(31,32,38,.18);position:relative}
+.kw-progress i{position:absolute;left:0;top:-.5px;height:2px;width:33%;background:var(--kw-ink);transition:transform .5s var(--kw-ease),width .5s}
+
+/* zdjęcie na pełną szerokość, wtapiane w grafit */
+.kw-bleed{position:relative;height:clamp(380px,52vw,760px);padding:0!important;overflow:hidden;background:var(--kw-dark)}
+.kw-bleed img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.kw-bleed::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,37,43,0) 45%,rgba(36,37,43,.85) 85%,var(--kw-dark))}
+
+/* JAK PRACUJEMY - slajder w miejscu opinii */
+.kw-steps{position:relative}
+.kw-steps-view{overflow:hidden}
+.kw-steps-track{display:flex;transition:transform .8s var(--kw-ease)}
+.kw-step{flex:0 0 100%;display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,10vw,150px);align-items:start;padding-right:calc(72px + 30px)}
+.kw-step blockquote{margin:0;font-family:var(--kw-serif);font-size:clamp(1.8rem,2.9vw,2.6rem);line-height:1.2;color:var(--kw-cream)}
+.kw-step .kw-step-lab{margin-top:44px;color:var(--kw-muted-d);font-size:1.1rem}
+.kw-step .kw-step-lab b{color:var(--kw-gold-l);font-weight:400;margin-right:10px}
+.kw-step .kw-ph{aspect-ratio:483/556}
+.kw-steps .kw-arrows{top:0;right:0}
+
+/* ATUTY - pasek haseł w miejscu logotypów */
+.kw-perks{display:grid;grid-template-columns:repeat(5,1fr);margin:clamp(60px,7vw,100px) 0 0;padding:0;list-style:none}
+.kw-perks li{text-align:center;padding:8px 18px;border-left:1px solid rgba(201,168,106,.55)}
+.kw-perks li:first-child{border-left:0}
+.kw-perks strong{display:block;font-family:var(--kw-serif);font-weight:400;font-size:1.45rem;color:var(--kw-cream);line-height:1.2}
+.kw-perks span{display:block;margin-top:8px;color:var(--kw-muted-d);font-size:1.02rem}
+
+/* POPRACUJMY RAZEM */
+.kw-cta{text-align:center}
+.kw-cta h2{font-size:clamp(3rem,8.5vw,8rem);line-height:1;margin:22px 0 46px}
+.kw-cta h2 a{color:var(--kw-cream)}
+
+/* ---------- STOPKA ---------- */
+.kw-foot{background:var(--kw-dark)!important;color:var(--kw-cream);padding:90px var(--kw-pad) 40px!important;border-top:1px solid rgba(237,232,226,.1)}
+.kw-foot-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:40px;align-items:start}
+.kw-foot-nav p{color:var(--kw-gold-l);text-transform:uppercase;letter-spacing:.08em;font-size:.95rem;margin:0 0 14px;max-width:none}
+.kw-foot-nav a,.kw-foot-nav span{display:block;width:max-content;color:var(--kw-cream);font-size:1.1rem;line-height:2;position:relative}
+.kw-foot-logo img{height:64px;width:auto;margin-left:auto}
+.kw-foot-bot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:80px;padding-top:26px;border-top:1px solid rgba(237,232,226,.12);color:var(--kw-muted-d);font-size:.98rem}
+.kw-foot-bot a{color:var(--kw-cream)}
+
+/* ---------- PODSTRONY (klocki silnika w nowej szacie) ---------- */
+body.kw .pagehead{background:var(--kw-dark);padding-top:170px}
+body.kw .pagehead h1{font-family:var(--kw-serif);text-transform:uppercase;font-weight:400;font-size:clamp(3rem,6vw,5.6rem);line-height:1;color:var(--kw-cream)}
+body.kw .pagehead .eyebrow{color:var(--kw-gold-l);text-transform:uppercase;letter-spacing:.08em;font-weight:300}
+body.kw .pagehead p{color:var(--kw-cream);font-weight:300}
+body.kw main>section:not([class]),body.kw main>section[style]{background:var(--kw-beige)}
+body.kw .eyebrow{color:var(--kw-gold-t);font-family:var(--kw-sans);font-weight:400;letter-spacing:.08em;text-transform:uppercase}
+body.kw .num{font-family:var(--kw-serif);color:var(--kw-gold-t);font-weight:400}
+body.kw .svc-row h3,body.kw .split-copy h2,body.kw .contact-grid h2{font-family:var(--kw-serif);font-weight:400;color:var(--kw-ink)}
+body.kw .muted{color:var(--kw-muted)}
+body.kw .cta{background:var(--kw-dark)!important;color:var(--kw-cream);text-align:center}
+body.kw .cta .wrap{display:block}
+body.kw .cta h2{font-family:var(--kw-serif);font-weight:400;color:var(--kw-cream);font-size:clamp(2.4rem,5vw,4.4rem);line-height:1.05;margin-inline:auto}
+body.kw .cta p{color:var(--kw-muted-d);margin-inline:auto}
+body.kw .cta .eyebrow{color:var(--kw-gold-l)}
+body.kw .cta-actions{justify-content:center;margin-top:34px}
+body.kw .btn{border-radius:999px;font-family:var(--kw-sans);font-weight:400}
+body.kw .btn-accent,body.kw .btn-light{background:transparent!important;border:1px solid var(--kw-gold)!important;color:inherit!important;box-shadow:none!important}
+body.kw .cta .btn-light,body.kw .cta .btn-ghost{color:var(--kw-cream)!important;border:1px solid var(--kw-gold)!important;background:transparent!important}
+body.kw .btn-accent:hover,body.kw .btn-light:hover,body.kw .cta .btn-ghost:hover{background:var(--kw-gold)!important;color:#fff!important}
+body.kw .form .btn-accent{color:var(--kw-ink)!important}
+body.kw .form input,body.kw .form textarea{background:#F6F2EC;border-color:rgba(31,32,38,.18);font-family:var(--kw-sans)}
+body.kw .sticky-call{background:var(--kw-dark)}
+body.kw .sticky-call a{font-family:var(--kw-sans)}
+
+/* ---------- RESPONSYWNOŚĆ ---------- */
+@media (max-width:1100px){
+  .kw-menu{grid-template-columns:1fr 1fr}
+  .kw-menu-main{grid-column:1/-1}
+  .kw-perks{grid-template-columns:repeat(3,1fr);row-gap:34px}
+  .kw-perks li:nth-child(4){border-left:0}
+  .kw-foot-grid{grid-template-columns:1fr 1fr}
+  .kw-foot-logo img{margin-left:0}
+}
+@media (max-width:860px){
+  .kw-head{padding:18px 20px}
+  .kw-phone{display:none}
+  .kw-pill{top:20px;left:auto;right:20px;transform:none;width:72px;height:48px}
+  .kw-pill:hover{width:72px}
+  .kw-hero{flex-direction:column;align-items:stretch;min-height:0}
+  .kw-hero-txt{width:auto;padding:120px 20px 40px}
+  .kw-hero-art{position:relative;width:100%;height:78vw;clip-path:polygon(0 18%,50% 0,100% 18%,100% 100%,0 100%)}
+  .kw-intro{grid-template-columns:1fr;gap:26px}
+  .kw-vert{writing-mode:horizontal-tb;transform:none;justify-self:start}
+  .kw-pair{grid-template-columns:1fr;gap:50px}
+  .kw-pair figure:last-child{grid-column:1}
+  .kw-pair figure:last-child .kw-ph{aspect-ratio:688/490}
+  .kw-arrows{position:static;flex-direction:row;justify-content:flex-end;padding:0 20px 24px}
+  .kw-arrows button{width:56px;height:56px}
+  .kw-srv-item{flex-basis:80vw}
+  .kw-step{grid-template-columns:1fr;padding-right:0;gap:34px}
+  .kw-step .kw-ph{aspect-ratio:4/3}
+  .kw-steps .kw-arrows{padding:30px 0 0;justify-content:flex-start}
+  .kw-perks{grid-template-columns:1fr 1fr}
+  .kw-perks li{border-left:0;border-top:1px solid rgba(201,168,106,.4);padding-top:20px}
+  .kw-perks li:nth-child(odd){border-right:1px solid rgba(201,168,106,.4)}
+  .kw-perks li:last-child{grid-column:1/-1;border-right:0}
+  .kw-menu{grid-template-columns:1fr;padding-top:110px}
+  .kw-foot-grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){.kw-steps-track,.kw-ph img,.kw-work img{transition:none}}
+.kw-sec.kw-pt-s{padding-top:clamp(40px,5vw,80px)!important}
+.kw-sec.kw-pt-0{padding-top:0!important}
+.kw-sec.kw-pt-xs{padding-top:clamp(20px,3vw,40px)!important}
+.kw-menu-col .kw-gap{margin-top:28px}
+@media (max-width:860px){body.kw{padding-bottom:0!important}.kw-foot{padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))!important}}
+.kw-head--light .kw-phone{color:var(--kw-cream)}
+/* stopklatka silnika w szacie wzoru: zdjęcie stoi, sekcja przewija się nad nim i wtapia w grafit */
+body.kw .stopklatka.kw-stk{margin:0;height:clamp(380px,52vw,700px);background:var(--kw-dark);padding:0!important}
+body.kw .stopklatka.kw-stk::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,37,43,0) 50%,rgba(36,37,43,.85) 88%,var(--kw-dark))}
+@media (max-width:700px){body.kw .stopklatka.kw-stk{height:52vh}}
+body.kw .pagehead h1,body.kw .pagehead .eyebrow,body.kw .pagehead p{text-shadow:0 2px 18px rgba(0,0,0,.55),0 1px 3px rgba(0,0,0,.5)}
